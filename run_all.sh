@@ -6,7 +6,6 @@ ENV_NAME="pilot"
 ENV_FILE="environment.yml"
 
 HF_REPO="AndrewLiu666/qwen2.5-1.5b-lora-pilot-project"
-LOCAL_LORA_ROOT="qwen_lora"
 
 # 0) create env if missing, then activate
 command -v conda >/dev/null 2>&1 || { echo "[ERROR] conda not found"; exit 1; }
@@ -21,19 +20,20 @@ fi
 source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate "${ENV_NAME}"
 
-# 1) download adapter repo directly into qwen_lora/checkpoint-150
-echo "[INFO] Downloading HF repo: ${HF_REPO}"
-python - <<PY
+# 1) download adapter repo directly into qwen_lora/checkpoint-150 (only if missing)
+if [ -f "qwen_lora/checkpoint-150/adapter_config.json" ] && [ -f "qwen_lora/checkpoint-150/adapter_model.safetensors" ]; then
+  echo "[INFO] Adapter already exists at qwen_lora/checkpoint-150, skip download."
+else
+  echo "[INFO] Downloading HF repo: ${HF_REPO}"
+  python - <<PY
 import os
 from huggingface_hub import snapshot_download
 
 repo_id = "${HF_REPO}"
 dst = "qwen_lora/checkpoint-150"
 
-# Make sure parent exists
-os.makedirs(os.path.dirname(dst), exist_ok=True)
+os.makedirs(dst, exist_ok=True)
 
-# Download repo snapshot directly into adapter_dir
 snapshot_download(
     repo_id=repo_id,
     local_dir=dst,
@@ -42,6 +42,7 @@ snapshot_download(
 
 print("[INFO] Adapter repo downloaded to:", dst)
 PY
+fi
 
 # hard checks for fixed commands
 if [ ! -d "qwen_lora/checkpoint-150" ]; then
