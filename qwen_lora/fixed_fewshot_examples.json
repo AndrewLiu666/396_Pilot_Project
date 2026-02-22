@@ -1,0 +1,38 @@
+{
+  "seed": 42,
+  "train_n_shot": 8,
+  "examples": [
+    {
+      "question": "Leif’s apple tree has 14 apples and his orange tree has 2 dozen oranges.  How many more oranges does he have than apples?",
+      "answer": "First, find out how many oranges Leif has: 2 dozen = 2 * 12 = 24 oranges\nThen subtract the number of apples from the number of oranges: 24 oranges - 14 apples = 10\n#### 10"
+    },
+    {
+      "question": "Marta sells tomatoes in a grocery store. On Friday, a shipment of 1000 kg of tomatoes arrived at the store. On Saturday, Marta sold a total of 300 kg of tomatoes to customers. On Sunday, the store was closed, causing 200 kg of tomatoes to rot and to be thrown away. On Monday morning another shipment arrived, twice the size of the first one. How many kilograms of tomatoes did Marta have ready for sale on Tuesday?",
+      "answer": "On Friday, Marta had 1000 kg of tomatoes.\nOn Saturday, she sold 300 kg, so she had 1000 - 300 = 700 kg left.\nOn Sunday, 200 kg of tomatoes rotted, so she had 700 - 200 = 500 kg left.\nOn Monday, a new shipment arrived, twice the size of the first one, which was 1000 kg. So the new shipment was 1000 * 2 = 2000 kg.\nNow, she had 500 + 2000 = 2500 kg of tomatoes.\n#### 2500"
+    },
+    {
+      "question": "Jame is trying to learn to tear playing cards.  He can tear 30 cards at a time.  A new deck of cards has 55 cards if you include the jokers and blank cards.  He tears cards 3 times a week.  If he buys 18 decks how many weeks can he go?",
+      "answer": "Jame starts with 18 decks of cards. Each deck has 55 cards. So he has 18 * 55 = 990 cards.\n\nJame tears cards 3 times a week. Each time, he tears 30 cards. So in a week, he tears 3 * 30 = 90 cards.\n\nNow, let's calculate how many weeks he can go with 990 cards: 990 cards / 90 cards per week = 11 weeks.\n\n#### 11"
+    },
+    {
+      "question": "Davida worked 35 hours on each of Weeks 1 and 2. She worked 48 hours each of Weeks 3 and 4. How many more hours did Davida work on Weeks 3 and 4 than on Weeks 1 and 2?",
+      "answer": "Davida worked 35 hours on Weeks 1 and 2. She worked 48 hours each on Weeks 3 and 4. \n\nStep 1: Calculate the total hours worked on Weeks 1 and 2.\n35 hours + 35 hours = 70 hours\n\nStep 2: Calculate the total hours worked on Weeks 3 and 4.\n48 hours + 48 hours = 96 hours\n\nStep 3: Find the difference in hours worked between Weeks 3 and 4 and Weeks 1 and 2.\n96 hours - 70 hours = 26 hours\n\n#### 26"
+    },
+    {
+      "question": "Rubble has $15 in his pocket and he needs to buy 2 notebooks and 2 pens. Each notebook cost $4.00 meanwhile each pen cost $1.50. How much money will be left from Rubble after the purchase?",
+      "answer": "First, find the total cost of the notebooks: 2 notebooks * $4.00/notebook = $8.00\nThen find the total cost of the pens: 2 pens * $1.50/pen = $3.00\nThen find the total cost of the items: $8.00 + $3.00 = $11.00\nThen subtract the total cost from the amount of money Rubble has: $15.00 - $11.00 = $4.00\n#### 4"
+    },
+    {
+      "question": "Emerson and his friends love rowing and don't miss the sport on weekends. Starting in the morning, Emerson rowed and was 6 miles away from his starting point on a particular weekend. He continued for another 15 miles at a constant speed, only stopping for a while for rest before covering the remaining 18 miles. What's the total distance covered by Emerson on his trip?",
+      "answer": "Emerson started 6 miles away from his starting point, then rowed 15 miles, and then rowed 18 miles to cover the remaining distance.\nTo find the total distance, add the three distances together: 6 + 15 + 18 = 39 miles\n#### 39"
+    },
+    {
+      "question": "Paul went to a shop to buy some groceries. He bought some bread for $2, butter for $3, and juice for two times the price of the bread. He had $15 for his shopping. How much money did Paul have left?",
+      "answer": "Paul spent $2 on bread and $3 on butter, so he spent $2 + $3 = $5 on bread and butter.\nThe juice cost two times the price of the bread, so it cost 2 * $2 = $4.\nIn total, Paul spent $5 + $4 = $9 on all the groceries.\nHe had $15 initially, so he has $15 - $9 = $6 left.\n#### 6"
+    },
+    {
+      "question": "James buys 3 dirt bikes for $150 each and 4 off-road vehicles for $300 each.  It also cost him $25 to register each of these.  How much did he pay for everything?",
+      "answer": "First, we need to calculate the total cost of the dirt bikes. 3 dirt bikes at $150 each is 3 * 150 = $450.\nNext, we calculate the total cost of the off-road vehicles. 4 off-road vehicles at $300 each is 4 * 300 = $1200.\nThen, we calculate the total registration cost. 3 dirt bikes at $25 each is 3 * 25 = $75. 4 off-road vehicles at $25 each is 4 * 25 = $100. The total registration cost is $75 + $100 = $175.\nNow, we add the cost of the dirt bikes, the cost of the off-road vehicles, and the registration cost. $450 + $1200 + $175 = $1825.\n#### 1825"
+    }
+  ]
+}
