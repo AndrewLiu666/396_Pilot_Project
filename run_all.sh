@@ -1,3 +1,4 @@
+export CONDA_NO_PLUGINS=true
 #!/usr/bin/env bash
 set -euo pipefail
 
